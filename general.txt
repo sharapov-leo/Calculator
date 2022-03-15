@@ -1,8 +1,6 @@
 # $v10
-  $id  $dec $zero $bool 
-    ( ) < > == + - * / 
-        cup cap
-        not xor and or 
+  $id  $dec
+    ( ) < > == + - * /
 #
 S -> E #1
     E -> T1 #2
