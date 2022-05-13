@@ -1,0 +1,39 @@
+// Simple Arithmetics Grammar
+// ==========================
+//
+// Accepts expressions like "2 * (3 + 4)" and computes their value.
+
+Expression
+  = additive
+  
+additive
+	= left:Integer "+" right:additive {
+	left[0]+=right[0];
+    left.push(left[left.length-1]+"+"+right[0].toString());
+    return left;
+    }
+  / Integer
+Integer "integer"
+  = _ [0-9]+ { return [parseInt(text(), 10), text()]; }
+
+_ "whitespace"
+  = [ \t\n\r]*
+  
+  
+  
+  Expression
+  = additive
+  
+additive
+	= left:Integer "+" right:additive {
+	
+    return left;
+    }
+  / Integer
+Integer "integer"
+  = _ [0-9]+ { return parseInt(text(), 10); }
+
+_ "whitespace"
+  = [ \t\n\r]*
+  
+// [answer,[constants],expressions]
