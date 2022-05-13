@@ -2,7 +2,7 @@ sentence
   = t1
 
 t1
-	= left:t2 "<" right:t1 { return left < right; }
+= left:t2 "<" right:t1 { return left < right; }
     / left:t2 ">" right:t1 { return left > right; }
     / left:t2 "==" right:t1 { return left == right; }
     / t2
